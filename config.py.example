@@ -1,5 +1,16 @@
+# LDAP configuration
 LDAP_URL = 'ldaps://ldap.yourdomain.com:636'
 LDAP_USER = 'cn=youruser,dc=yourdomain,dc=com'
 LDAP_PASSWORD = 'yourpassword'
 LDAP_USER_SEARCH_BASE_DN = "dc=yourdomain,dc=com"
+
+# Email address from which the notifications are sent
 MAIL_FROM = 'mailer@yourdomain.com'
+
+# Days before password expiration set in your LDAP
+pwdMaxAge = 90
+
+# List defining the days on which a warning alert is sent
+# (should be between 0 and pwdMaxAge)
+# In this example, a new password expires after 90 days so a notification is sent 10 days and 3 days before password expiration
+pwdWarnDays = [80, 87]

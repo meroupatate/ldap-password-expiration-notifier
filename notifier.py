@@ -6,13 +6,6 @@ from datetime import datetime
 from config import *
 
 
-# Days before password expiration set in your LDAP
-pwdMaxAge = 90
-# List defining the days on which a warning alert is sent
-# (should be between 0 and pwdMaxAge)
-pwdWarnDays = [80, 87]
-
-
 def send_mail(uid, mail, lastPwdUpdate):
     mailTo = mail
     mailFrom = MAIL_FROM
