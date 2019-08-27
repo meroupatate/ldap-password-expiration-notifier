@@ -63,6 +63,8 @@ def check_password_expiry(ldap_users):
                     print(f'Sending email to user {uid}: password expires in {pwdMaxAge - lastPwdUpdate} days')
                     send_mail(uid, mail, lastPwdUpdate)
                     print(f"Email sent")
+                else:
+                    print("No email specified for user {uid}")
             elif lastPwdUpdate > pwdMaxAge:
                 print(f'User {uid}: password expired for {lastPwdUpdate - pwdMaxAge} days')
             else:
