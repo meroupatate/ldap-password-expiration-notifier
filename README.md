@@ -17,7 +17,7 @@ The script is designed to be run once a day and sends an email notification to L
 
 First clone the repository:
 ```bash
-git clone https://github.com/meroupatate/ldap-password-expiration-notifier
+git clone https://github.com/meroupatate/ldap-password-expiration-notifier.git
 ```
 
 Install the python dependencies:
